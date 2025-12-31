@@ -1,3 +1,8 @@
 {
-  "port": 3005
+  "app": "romantic-pike-db-0mqdwg",
+  "port": 3005,
+  "build": {
+    "location": "iran"
+  },
+  "disks": []
 }
