@@ -1,0 +1,102 @@
+{% load static %}
+<!doctype html>
+<html lang="fa" dir="rtl" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Dr_CodeMagic{% endblock %}</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      box-sizing: border-box;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+    }
+
+    .glow-effect {
+      box-shadow: 0 0 30px rgba(102, 126, 234, 0.4);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .code-symbol {
+      opacity: 0.1;
+      font-size: 200px;
+      position: absolute;
+      font-weight: bold;
+      color: #667eea;
+      user-select: none;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <div id="app" class="w-full min-h-screen">
+    <div class="min-h-full w-full relative" id="app-container" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+      <!-- Decorative Code Symbols -->
+      <div class="code-symbol" style="top: 10%; right: 5%;">&lt;/&gt;</div>
+      <div class="code-symbol" style="top: 60%; left: 5%;">{ }</div>
+
+      <!-- Header / Navbar -->
+      <header class="w-full py-6 px-8" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center">
+          <div id="brand-logo" class="text-3xl font-bold gradient-text">Dr_CodeMagic</div>
+          <div class="flex gap-6">
+            <a href="{% url 'portfolio' %}" class="text-white hover:text-purple-400 transition-colors duration-300 font-medium">صفحه اصلی</a>
+            <a href="{% url 'about' %}" class="text-white hover:text-purple-400 transition-colors duration-300 font-medium">درباره ما</a>
+            <a href="{% url 'projects' %}" class="text-white hover:text-purple-400 transition-colors duration-300 font-medium">نمونه کارها</a>
+            <a href="{% url 'contact' %}" class="text-white hover:text-purple-400 transition-colors duration-300 font-medium">ارتباط با ما</a>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        {% block content %}
+        {% endblock %}
+      </main>
+
+      <!-- Footer -->
+      <footer class="w-full py-8 px-8 mt-16" style="background: rgba(0,0,0,0.3);">
+        <div class="max-w-7xl mx-auto text-center">
+          <p class="text-purple-300 text-lg"> <span class="gradient-text font-bold">Dr_CodeMagic</span> - تمامی حقوق محفوظ است</p>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="{% static 'portfolio/js/main.js' %}"></script>
+</body>
+</html>

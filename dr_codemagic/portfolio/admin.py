@@ -1,0 +1,10 @@
+from django.contrib import admin
+from . import models
+
+
+
+admin.site.register(models.Profile)
+admin.site.register(models.Service)
+admin.site.register(models.ProjectCategory)
+admin.site.register(models.Project)
+admin.site.register(models.ContactMessage)
