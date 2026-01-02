@@ -1,8 +1,9 @@
 {
-"app":"dr-codemagic",
-"port":80,
-"build":{
-"location":"iran"
-},
-"disks":[]
+  "platform": "python",
+  "app": "dr-codemagic",
+  "env": "python3.10",
+  "build": {
+    "beforeDeploy": ["pip install -r requirements.txt"]
+  },
+  "disks": []
 }
