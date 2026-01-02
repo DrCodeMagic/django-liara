@@ -1,1 +1,2 @@
-web: gunicorn dr_codemagic.wsgi
+web: gunicorn dr_codemagic.wsgi:application
+
