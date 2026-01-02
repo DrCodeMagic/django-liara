@@ -84,14 +84,9 @@ WSGI_APPLICATION = 'dr_codemagic.wsgi.application'
 #    }
 #}
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',                      # نام دیتابیس پیش‌فرض لیارا
-        'USER': 'root',                          # نام کاربری
-        'PASSWORD': 'BCg0dT5hZdsquUXKx3lY1ioz', # رمز عبور
-        'HOST': 'dr-codemagic-db',               # هاست شبکه خصوصی
-        'PORT': '5432',                           # پورت
-    }
+    'default': dj_database_url.config(
+        default='sqlite:///db.sqlite3'
+    )
 }
 
 
