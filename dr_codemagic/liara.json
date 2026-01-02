@@ -1,8 +1,8 @@
 {
-  "app": "romantic-pike-db-0mqdwg",
-  "port": 3005,
-  "build": {
-    "location": "iran"
-  },
-  "disks": []
+"app":"dr-codemagic"
+"port":80
+"build":{
+"location":"iran"
+}
+"disks":[]
 }
