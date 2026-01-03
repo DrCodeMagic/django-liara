@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-)%7f)g0ls%cvby_92)*!k+5y0_5tupjzbizu!^lqz#us6r&(7@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['dr-codemagic.liara.run']
 
 
 # Application definition
