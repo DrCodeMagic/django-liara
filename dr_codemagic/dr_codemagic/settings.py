@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)%7f)g0ls%cvby_92)*!k+5y0_5tupjzbizu!^lqz#us6r&(7@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['dr-codemagic.liara.run']
 
