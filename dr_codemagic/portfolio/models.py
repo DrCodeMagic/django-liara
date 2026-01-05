@@ -84,7 +84,14 @@ class Project(models.Model):
         related_name='projects'
     )
     description = models.TextField()
-    image = models.ImageField(upload_to='projects/')
+    
+    # فقط اسم فایل عکس داخل static
+    image_name = models.CharField(
+        max_length=100,
+        blank=True,
+        help_text="اسم فایل عکس داخل static/portfolio/images/"
+    )
+    
     project_url = models.URLField(blank=True)
     technologies = models.CharField(
         max_length=255,
@@ -97,9 +104,7 @@ class Project(models.Model):
         return self.title
 
 
-# =========================
-# پیام‌های تماس
-# =========================
+
 class ContactMessage(models.Model):
     STATUS_CHOICES = (
         ('new', 'جدید'),
