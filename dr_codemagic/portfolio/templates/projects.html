@@ -19,7 +19,7 @@
           
           <!-- Image -->
           <div class="h-64 w-full overflow-hidden">
-            <img src="{{ project.image.url }}"
+            <img src="{% static 'portfolio/images/{{ project.image_name }}' %}"
                  alt="{{ project.title }}"
                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500">
           </div>
@@ -50,3 +50,4 @@
 </section>
 
 {% endblock %}
+
