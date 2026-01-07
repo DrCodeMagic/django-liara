@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <!-- اضافه کردن meta viewport برای نمایش دسکتاپ روی موبایل -->
-  <meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=1024, initial-scale=1">
   
   <title>{% block title %}Dr_CodeMagic{% endblock %}</title>
 
@@ -18,6 +18,20 @@
   <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
 
   <style>
+    /* ===== تغییرات اضافه شده برای فیکس دسکتاپ روی موبایل ===== */
+    html, body {
+      min-width: 1024px;   /* حداقل عرض دسکتاپ */
+      overflow-x: auto;     /* فعال کردن اسکرول افقی */
+      margin: 0;
+      padding: 0;
+    }
+
+    #app-container {
+      width: 1024px;        /* عرض دسکتاپ */
+      margin: 0 auto;       /* وسط چین کردن */
+    }
+
+    /* ===== کدهای موجود شما ===== */
     body {
       font-family: 'Vazirmatn', sans-serif;
       box-sizing: border-box;
@@ -102,3 +116,4 @@
   <script src="{% static 'portfolio/js/main.js' %}"></script>
 </body>
 </html>
+
